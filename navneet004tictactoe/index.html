@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>JavaScript - Tic Tac Toe Board Game</title>
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+   
+    <body onload="startGame();">
+        
+        <div class="container">
+            <div class="row">
+                
+                <h1>Tic Tac Toe</h1>
+            </div>
+            <div class="row">
+                
+                <h3 id="turnMessage"> 
+
+                </h3>
+            </div>
+            <div id="board">
+                
+                <div id="topRow" class="row">
+                    <div id="square1" class="top left square" onCLick="nextMove(this)"></div>
+                    <div id="square2" class="top middle square" onCLick="nextMove(this)"></div>
+                    <div id="square3" class="top right square" onCLick="nextMove(this)"></div>
+                </div>
+               
+                <div id="middleRow" class="row">
+                    <div id="square4" class="middle left square" onCLick="nextMove(this)"></div>
+                    <div id="square5" class="middle center square" onCLick="nextMove(this)"></div>
+                    <div id="square6" class="middle right square" onCLick="nextMove(this)"></div>
+                </div>
+               
+                <div id="bottomRow" class="row">
+                    <div id="square7" class="bottom left square" onCLick="nextMove(this)"></div>
+                    <div id="square8" class="bottom middle square" onCLick="nextMove(this)"></div>
+                    <div id="square9" class="bottom right square" onCLick="nextMove(this)"></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <button id="refreshBtn" onClick="startGame()">Play again?</button>
+            </div>
+        </div>
+
+        
+        <script src="scripts.js" type="application/javascript"></script>
+    </body>
+</html>
