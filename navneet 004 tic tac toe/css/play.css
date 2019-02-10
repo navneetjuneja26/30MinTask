@@ -1,0 +1,127 @@
+body {
+    text-align: center;
+    font-family: 'Caveat Brush', cursive;
+    background-repeat: no-repeat; 
+   background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162)); 
+    background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+    background-size:cover;
+  } 
+
+
+    h1{
+      font-family: 'Caveat Brush', cursive;
+    }
+  
+  #board {
+    margin: 30px auto 30px auto;
+    height: 400px;
+    width: 400px;      
+    
+  } 
+  @-webkit-keyframes example {
+    from {background-color: orange;}
+    to {background-color: yellow;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    from {background-color: orange;}
+    to {background-color: yellow;}
+  }
+
+  
+  .box {
+    float: left;
+	width: 100px;
+	height: 100px;
+    transition: all .25s ease-in-out;
+	font-family: sans-serif;
+    font-size: 80px;
+    background: orange;
+	cursor: pointer;
+	line-height: 100px;
+    border-radius: 5px;
+    
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-name: example;
+    animation-duration: 4s;
+  } 
+  #lbl{ margin-top: 60px;
+      font-size: 20px; 
+      transition: all .25s ease-in-out;
+      border-radius: 5px;
+  }
+  .box:hover{
+	background: rgba(10,10,10,0.8);
+	
+}
+  #scores {
+    font-size: 150%;
+  }
+  
+  td {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 3.5em;
+    border: 1px solid black;
+    height: 133px;
+    width: 133px;
+    text-align: center;
+    font-size: 300%;
+  }
+  
+  tbody {
+    border: none;
+  }
+  
+  .top > td{
+    border-top:none;
+    border-bottom: solid 1px black;
+  }
+  .mid > td {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+  }
+  .bot > td {
+    border-bottom: none;
+  }
+  
+  
+  .panel {
+    margin-top: 200px;
+  } 
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 0px;
+    z-index: 1;
+    background: #1D4350;
+    border-radius: 0px 20px 0px 20px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+.nav_btn{
+    width:80px;
+    height:100%;
+    color: white;
+    padding: 10px 0px;
+    
+    
+    background-color: red;
+   -webkit-animation-name: example; 
+   -webkit-animation-duration: 4s; 
+   animation-name: example;
+   animation-duration: 4s;
+ } 
+
+ 
+ 

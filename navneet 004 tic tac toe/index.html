@@ -1,57 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+	<title>Cyber Group Login</title>
+       <meta charset="utf-8">
+	   <meta name="description" content="This is Cyber Group Login page">	
+	   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	   <link href="css/index.css" rel="stylesheet" type="text/css"> 
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	   <script src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>-->
+  
+  
+  </script>  
+  <link rel="stylesheet" href="css/index.css"> 
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <title>JavaScript - Tic Tac Toe Board Game</title>
-        
-        <link rel="stylesheet" href="styles.css">
-    </head>
+  <script>
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
+        particlesJS('particles-js',
+          {
+            "particles": {
+              "number": {
+                "value": 80,
+                "density": {
+                  "enable": true,
+                  "value_area": 800
+                }
+              },
+              "color": {
+                "value": "#ffffff"
+              },
+              "shape": {
+                "type": "circle",
+                "stroke": {
+                  "width": 0,
+                  "color": "#000000"
+                },
+                "polygon": {
+                  "nb_sides": 5
+                },
+                "image": {
+                  "width": 100,
+                  "height": 100
+                }
+              },
+              "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                  "enable": false,
+                  "speed": 1,
+                  "opacity_min": 0.1,
+                  "sync": false
+                }
+              },
+              "size": {
+                "value": 5,
+                "random": true,
+                "anim": {
+                  "enable": false,
+                  "speed": 40,
+                  "size_min": 0.1,
+                  "sync": false
+                }
+              },
+              "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+              },
+              "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "attract": {
+                  "enable": false,
+                  "rotateX": 600,
+                  "rotateY": 1200
+                }
+              }
+            },
+            "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                "onhover": {
+                  "enable": true,
+                  "mode": "repulse"
+                },
+                "onclick": {
+                  "enable": true,
+                  "mode": "push"
+                },
+                "resize": true
+              },
+              "modes": {
+                "grab": {
+                  "distance": 400,
+                  "line_linked": {
+                    "opacity": 1
+                  }
+                },
+                "bubble": {
+                  "distance": 400,
+                  "size": 40,
+                  "duration": 2,
+                  "opacity": 8,
+                  "speed": 3
+                },
+                "repulse": {
+                  "distance": 200
+                },
+                "push": {
+                  "particles_nb": 4
+                },
+                "remove": {
+                  "particles_nb": 2
+                }
+              }
+            },
+            "retina_detect": true,
+            "config_demo": {
+              "hide_card": false,
+              "background_color": "#b61924",
+              "background_image": "",
+              "background_position": "100% 100%",
+              "background_repeat": "no-repeat",
+              "background_size": "cover"
+            }
+          }
+        );
+    
+    });
+    
+    
+    
+    
+    
+      
+    function getEmployee(){
+      var userid=document.getElementById('userid').value;
+            	 	    var pass1=document.getElementById('password').value;
 
-   
-    <body onload="startGame();">
-        
-        <div class="container">
-            <div class="row">
-                
-                <h1>Tic Tac Toe</h1>
-            </div>
-            <div class="row">
-                
-                <h3 id="turnMessage"> 
+                    
+            	 	  $.ajax({ 
 
-                </h3>
-            </div>
-            <div id="board">
-                
-                <div id="topRow" class="row">
-                    <div id="square1" class="top left square" onCLick="nextMove(this)"></div>
-                    <div id="square2" class="top middle square" onCLick="nextMove(this)"></div>
-                    <div id="square3" class="top right square" onCLick="nextMove(this)"></div>
-                </div>
-               
-                <div id="middleRow" class="row">
-                    <div id="square4" class="middle left square" onCLick="nextMove(this)"></div>
-                    <div id="square5" class="middle center square" onCLick="nextMove(this)"></div>
-                    <div id="square6" class="middle right square" onCLick="nextMove(this)"></div>
-                </div>
-               
-                <div id="bottomRow" class="row">
-                    <div id="square7" class="bottom left square" onCLick="nextMove(this)"></div>
-                    <div id="square8" class="bottom middle square" onCLick="nextMove(this)"></div>
-                    <div id="square9" class="bottom right square" onCLick="nextMove(this)"></div>
-                </div>
-            </div>
-            <div class="row">
-                
-                <button id="refreshBtn" onClick="startGame()">Play again?</button>
-            </div>
-        </div>
 
-        
-        <script src="scripts.js" type="application/javascript"></script>
-    </body>
-</html>
+                      url : "http://localhost:51543/api/People/"+userid,
+                      type : 'GET',
+                     
+                      datatype : 'json',
+                      success : function(res){
+                     
+                              if( userid==res.userid  )
+                              {
+                              	alert("successfully logged in");
+                              	  window.location.href="play.html?userid="+res.userid;
+                              }
+                              else
+                              {
+                              	temp--;
+                              	alert("please enter correct user_name and password, you have onnly"+temp+"chance");
+                              }
+                             
+                           }
+                           }
+                         );
+    } 
+    
+    
+    </script>
+    
+	</head>
+<body> 
+	<video autoplay loop muted class="video_selector">
+		<source src ="Background2.mp4" type="video/mp4">
+	</video>
+<div class="header">
+	<img src="images/cyg_logo.jpg" alt="">
+	<div class="wel_text">Welcome To Cyber Group India</br>
+	</div>
+</div>
+<div id="nav_bar">
+	<div class="nav_items">
+		<ul>	
+			
+			<a href="signup.html"><button type="button" class="nav_btn">Signup</button></a>
+			
+			
+			</div>
+		</ul>
+	</div>
+</div>
+	<div class="bigbox">
+	<center>
+		<p class="logbox">Enter your login credentials</p>
+		<div class="container">
+			<div id="login-box">
+				<div class="logo">
+					<img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="img img-responsive img-circle center-block"/>
+					<h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+				</div>
+				<div class="controls"> 
+					<form >
+					<input type="text" id="userid"  placeholder="userid" class="form-control" /> 
+					<input type="password" id="password"  placeholder="password" class="form-control" /> <br>
+					<input type="button" value="Login"  onClick="getEmployee()" class="btn btn-default btn-block btn-custom"> 
+				    </form>
+				</br>
+				Don't Have SIGNUP ? <a href="signup.html">SIGNUP</a>
+				</div>
+			</div>
+			<div id="particles-js"></div> 
+		</div> 
+	</center>
+	</div>
+<div id="footer">
+Copyright All rights reserved © 2017
+</div> 
+
+
+  
+</body></html>
