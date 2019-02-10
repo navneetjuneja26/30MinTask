@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TicTacToeModelStoreContainer" CdmEntityContainer="TicTacToeEntities2">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="TicTacToeModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="pswd" ColumnName="pswd" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
